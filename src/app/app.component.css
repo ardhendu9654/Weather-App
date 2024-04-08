@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.top{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding-bottom: 10px;
+}
+input{
+    background: transparent;
+    color: white;
+}
+.search{
+    background-color: rgba(103, 212, 185, 0.793);
+    color: black;
+}
+.container{
+    color: white;
+}
+.rainbox{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    background: transparent;
+    background-color: rgba(0,0,0,0.6);
+    margin-bottom: 5px;
+}
+.days{
+    border: 1px solid black;
+    border-radius: 10px;
+    background: transparent;
+    background-color: rgba(0,0,0,0.4);
+}
+.day{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    background: transparent;
+    background-color: rgba(0,0,0,0.4);
+}
+.day span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.extradays{
+    text-decoration: none;
+    color: white;
+}
+.p{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    margin-top: 10px;
+    background: transparent;
+    background-color: rgba(0,0,0,0.6);
+    margin-bottom: 5px;
+}
+.weather_details{
+    display: flex;
+    flex-direction: row;
+}
+.wd{
+    padding: 20px;
+    margin: 2px;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    background: transparent;
+    background-color: rgba(0,0,0,0.4);
+}
+.sunset_sunrise{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 30%;
+    background: transparent;
+    background-color: rgba(0,0,0,0.4);
+    width: 400px;
+    
+    border-radius: 10px;
+}
+.sunset{
+    color: rgb(251, 247, 8);
+    
+    font-size: 25px;
+    
+}
+.sunrise{
+    color: rgb(251, 247, 8);
+    
+    font-size: 25px;
+}

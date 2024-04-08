@@ -1,0 +1,99 @@
+<router-outlet></router-outlet>
+
+<body>
+
+    <nav class="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather App</a>
+
+            <form [formGroup]="searchvalue" class="d-flex" role="search" #searchForm (ngSubmit)="submit()">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" formControlName="searchValue" #searchInput>
+                <button class="btn btn-outline-success search" type="submit"  >Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="temp" >{{data.main.temp}}°<h5 class="fog">fog</h5></h1>
+        <h2 class="city" #cityElement></h2>
+        <p>Sun 0°/0° Air quality:232-Poor</p>
+        <div class="rainbox">
+            💧 RainFall Forecast
+        </div>
+        <!-- <div class="days">
+            <div class="day1 day">
+                Today <span>☁ Fog</span><span>0°/0°</span>
+            </div>
+            <div class="day2 day">
+                Tomorrow  <span>⛅ Partly cloud</span><span>26°/17°</span>
+            </div>
+            <div class="day3 day">
+                Tue  <span>🌞 Sunny</span> <span>27°/18°</span>
+            </div>
+            <div class="day4 day">
+                Wed <span>☁ Fog</span> <span>23°/18°</span>
+            </div>
+            <div class="day5 day">
+                Thus  <span>🌞 Sunny</span> <span>27°/19°</span>
+            </div>
+            <div class="day6 day">
+                Fri <span>☁ Fog</span> <span>23°/18°</span>
+            </div>
+            <div class="day7 day">
+                Sat <span>⛅ Partly cloud</span> <span>23°/18°</span>
+            </div>
+            <div class="linebar"></div>
+            <div class="15days">
+                <a class="extradays" href="">15-day weather forecast</a>
+            </div>
+
+        </div> -->
+
+        <p class="p">Weather Details</p>
+        <div class="weather_details">
+            <div class="temp wd">
+                🥵<br>
+                Feels Like<br>
+                <p >{{data.main.feels_like}}°</p>
+            </div>
+            <div class="wind wd">
+                💨<br>
+                S wind<br>
+                <p>{{data.wind.speed}}km/h</p>
+            </div>
+            <div class="humidity wd">
+                💧<br>
+                Humidity<br>
+                <p>{{data.main.humidity}}%</p>
+            </div>
+            <div class="uv wd">
+                🔆<br>
+                UV<br>
+                0 Every Week
+            </div>
+            <div class="air-pressure wd">
+                💨⇊<br>
+                Air Pressure<br>
+                <p>{{data.main.pressure}} hpa</p>
+            </div>
+        </div>
+
+        <div class="sunset_sunrise">
+
+            <div class="sunset">
+                🌄<br>
+                Sunset<br>
+                <p>{{sunset}}</p>
+            </div>
+            <div class="sunrise">
+                🌅<br>
+                Sunrise<br>
+                <p>{{sunrise}}</p>
+            </div>
+
+        </div><br>
+
+
+    </div>
+
+</body>
