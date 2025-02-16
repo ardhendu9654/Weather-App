@@ -1,100 +1,145 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    font-family: Arial, sans-serif;
 }
-.top{
-    background-color: rgba(0,0,0,0.4);
+
+.top {
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    padding-bottom: 10px;
+    padding: 10px;
+    text-align: center;
 }
-input{
+
+input {
     background: transparent;
     color: white;
+    border: 1px solid white;
+    padding: 5px;
+    outline: none;
 }
-.search{
+
+.search {
     background-color: rgba(103, 212, 185, 0.793);
     color: black;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.container{
+
+.container {
     color: white;
+    text-align: center;
+    padding: 10px;
 }
-.rainbox{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 150px;
-    background: transparent;
-    background-color: rgba(0,0,0,0.6);
-    margin-bottom: 5px;
-}
-.days{
-    border: 1px solid black;
-    border-radius: 10px;
-    background: transparent;
-    background-color: rgba(0,0,0,0.4);
-}
-.day{
+
+.rainbox,
+.p,
+.wd {
     border: 1px solid black;
     border-radius: 10px;
     width: 100%;
-    background: transparent;
-    background-color: rgba(0,0,0,0.4);
+    max-width: 150px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
 }
-.day span{
+
+.days,
+.day {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.day span {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.extradays{
+
+.extradays {
     text-decoration: none;
     color: white;
 }
-.p{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 150px;
-    margin-top: 10px;
-    background: transparent;
-    background-color: rgba(0,0,0,0.6);
-    margin-bottom: 5px;
-}
-.weather_details{
+
+.weather_details {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.wd{
-    padding: 20px;
-    margin: 2px;
-    font-size: large;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 150px;
-    background: transparent;
-    background-color: rgba(0,0,0,0.4);
-}
-.sunset_sunrise{
+
+.sunset_sunrise {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    margin-left: 30%;
-    background: transparent;
-    background-color: rgba(0,0,0,0.4);
-    width: 400px;
-    
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
     border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
 }
-.sunset{
+
+.sunset, .sunrise {
     color: rgb(251, 247, 8);
-    
-    font-size: 25px;
-    
+    font-size: 20px;
 }
-.sunrise{
-    color: rgb(251, 247, 8);
-    
-    font-size: 25px;
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .weather_details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wd {
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .sunset_sunrise {
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;
+    }
+
+    .top {
+        font-size: 14px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .weather_details {
+        flex-direction: column;
+    }
+
+    .sunset_sunrise {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sunset, .sunrise {
+        font-size: 18px;
+    }
 }
